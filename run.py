@@ -39,21 +39,35 @@ def show_rules():
     print("Good luck!")
     print()
 
+    while True:
+        choice = input("Please choose an option (1: Start, 2: Exit): ")
+
+        if choice == "1":
+            start_game()
+            break
+        elif choice == "2":
+            print("Exiting the game...")
+            return
+        else:
+            print("Error: Invalid command. Please try again.")
 
 def main():
     print_menu()
 
-    choice = input("Please type the number:\n")
+    while True:
+        choice = input("Please type the number: ")
 
-    if choice == "1":
-        start_game()
-    elif choice == "2":
-        show_rules()
-    elif choice == "3":
-        print("Exiting the game...")
-        return
-    else:
-        print("Wrong command. Please try again\n")
+        if choice == "1":
+            start_game()
+            break
+        elif choice == "2":
+            show_rules()
+            break
+        elif choice == "3":
+            print("Exiting the game...")
+            return
+        else:
+            print("Error: Invalid command. Please try again.")
 
 
 if __name__ == "__main__":
