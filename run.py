@@ -1,4 +1,5 @@
 import ascii_art
+import os
 
 print(ascii_art.title_art)
 
@@ -16,6 +17,10 @@ def start_game():
     """
     Function to start the game
     """
+    os.system('clear' if os.name == 'posix' else 'cls')  # Clear actual terminal screen
+    print(ascii_art.pizza_art)  # Print ascii art of pizza
+    print("Are you ready?")
+    choice = input("Please answer Yes / No?: ")
     print("Starting the game...")
 
 
@@ -38,7 +43,7 @@ def show_rules():
 def main():
     print_menu()
 
-    choice = input("Please type the number:\n ")
+    choice = input("Please type the number:\n")
 
     if choice == "1":
         start_game()
