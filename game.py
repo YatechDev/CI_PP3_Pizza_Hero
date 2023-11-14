@@ -2,8 +2,6 @@
 
 import ascii_art
 import os
-from run import main
-
 
 class Player:
     def __init__(self, name):
@@ -256,7 +254,7 @@ def game_completed(player):
     input("Press Enter to return to the beginning...")
     main()
 
-def game_over():
+def game_over(player):
     clear_screen()
     print(ascii_art.game_over_art)
     input("Press Enter to return to the beginning...")
