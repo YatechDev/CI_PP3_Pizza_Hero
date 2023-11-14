@@ -71,7 +71,7 @@ def start_game(player):
                 print("Invalid input. Please enter a number.")
 
         if options[choice - 1] == "An echo":
-            print("\nFunghi: Amazing! You're truly a hero. Let me give you a hint.")
+            print("\nFunghi: Amazing! You're truly a hero. Let me give you a hint.\n")
             input("Press Enter to continue...")
 
             clear_screen()
@@ -99,7 +99,7 @@ def quest_1(player):
 
     clear_screen()
     print(ascii_art.title_art)
-    print("\nDark Timmy: Greetings, brave adventurer! Welcome to the gloomy side of Mushroomville.")
+    print("\nDark Timmy: Greetings, brave adventurer! Welcome to the gloomy side of Mushroomville.\n")
     input("Press Enter to continue...")
 
     clear_screen()
@@ -135,7 +135,7 @@ def quest_1(player):
         print(
             "\nDark Timmy: The recipe you seek is indeed a valuable one. However, you can find it in Beatrix's shop at the central market.\n")
     else:
-        print("\nDark Timmy: No worries. Let's get back to business.")
+        print("\nDark Timmy: No worries. Let's get back to business.\n")
         input("Press Enter to continue...")
         print(
             "\nDark Timmy: The recipe you seek is indeed a valuable one. However, you can find it in Beatrix's shop at the central market.\n")
@@ -147,12 +147,12 @@ def quest_1(player):
 def encounter_strange_character(player):
     clear_screen()
     print(ascii_art.title_art)
-    print("\nAs you make your way to the central market, you encounter a strange character.")
+    print("\nAs you make your way to the central market, you encounter a strange character.\n")
     input("Press Enter to initiate a conversation...")
 
     clear_screen()
     print(ascii_art.title_art)
-    print("\nZephyr: Greetings, adventurer! I am Zephyr, the wanderer of Mushroomville.")
+    print("\nZephyr: Greetings, adventurer! I am Zephyr, the wanderer of Mushroomville.\n")
     input("Press Enter to continue...")
 
     clear_screen()
@@ -173,24 +173,24 @@ def encounter_strange_character(player):
             print("Invalid input. Please enter a number.")
 
     if choice == 1:
-        print("\nZephyr: Surprised by your sudden attack, I'll make a swift escape.")
+        print("\nZephyr: Surprised by your sudden attack, I'll make a swift escape.\n")
         input("Press Enter to continue...")
         clear_screen()
         print(ascii_art.title_art)
 
     elif choice == 2:
-        print("\nZephyr: You flee from the encounter, leaving the bewildered Zephyr behind.")
+        print("\nZephyr: You flee from the encounter, leaving the bewildered Zephyr behind.\n")
         input("Press Enter to continue...")
         clear_screen()
         print(ascii_art.title_art)
 
     elif choice == 3:
-        print("\nZephyr: Wise choice, adventurer. To reach your destination, head straight to the central market.")
+        print("\nZephyr: Wise choice, adventurer. To reach your destination, head straight to the central market.\n")
         input("Press Enter to continue...")
         clear_screen()
         print(ascii_art.title_art)
 
-    print("\nYou successfully navigate through the encounter and arrive at the central market.")
+    print("\nYou successfully navigate through the encounter and arrive at the central market.\n")
     input("Press Enter to meet Beatrix and start the next quest...")
     clear_screen()
     print(ascii_art.title_art)
@@ -211,7 +211,7 @@ def quest_3(player):
     clear_screen()
     print(ascii_art.title_art)
     print("Beatrix hands you a slice of her famous magical pizza.\n")
-    print("This is a pineapple pizza. Only the bravest of adventurers are courageous enough to try it!")
+    print("This is a pineapple pizza. Only the bravest of adventurers are courageous enough to try it!\n")
     input("Press Enter to make your choice...")
 
     clear_screen()
@@ -252,11 +252,11 @@ def game_completed(player):
     print("The Pineapple Paradise Pizza!\n")
     print("Thank you for playing the game. We hope you enjoyed your adventure!\n")
     print(ascii_art.game_completed_art)
-    input("Press Enter to return to main menu...")
+    input("\nPress Enter to return to main menu...")
     start_game(player)
 
 def game_over(player):
     clear_screen()
     print(ascii_art.game_over_art)
-    input("Press Enter to return to main menu...")
+    input("\nPress Enter to return to main menu...")
     start_game(player)
