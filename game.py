@@ -2,6 +2,8 @@
 
 import ascii_art
 import os
+from run import main
+
 
 class Player:
     def __init__(self, name):
@@ -210,7 +212,8 @@ def quest_3(player):
 
     clear_screen()
     print(ascii_art.title_art)
-    print("Beatrix hands you a slice of her famous magical pizza.")
+    print("Beatrix hands you a slice of her famous magical pizza.\n")
+    print("This is a pineapple pizza. Only the bravest of adventurers are courageous enough to try it!")
     input("Press Enter to make your choice...")
 
     clear_screen()
@@ -239,6 +242,8 @@ def quest_3(player):
         print("\nBeatrix: A peculiar decision, but I respect it. The quest continues...\n")
         input("Press Enter to proceed...")
 
+        game_over(player)
+
 def game_completed(player):
     clear_screen()
     print(ascii_art.title_art)
@@ -248,3 +253,11 @@ def game_completed(player):
     print("As a reward, I present to you the secret recipe for the most magical pizza of all...\n")
     print("The Pineapple Paradise Pizza!\n")
     print("Thank you for playing the game. We hope you enjoyed your adventure!\n")
+    input("Press Enter to return to the beginning...")
+    main()
+
+def game_over():
+    clear_screen()
+    print(ascii_art.game_over_art)
+    input("Press Enter to return to the beginning...")
+    main()
