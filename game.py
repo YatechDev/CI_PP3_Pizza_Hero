@@ -42,9 +42,8 @@ def start_game(player):
     print("\nAs you walk through the town, you encounter a friendly mushroom named Funghi.\n")
     input("Press Enter to talk to Funghi...")
 
-    print(
-        "\nFunghi: Hello, brave adventurer! I heard you're on a quest for the magical pizza. I can help you, but first, "
-        "you must prove yourself.\n")
+    print("\nFunghi: Hello, brave adventurer! I heard you're on a quest for the magical pizza. I can help you, "
+          "but first, you must prove yourself.\n")
     input("Press Enter to continue...")
 
     # Loop for the riddle question
@@ -134,3 +133,48 @@ def quest_1(player):
 
     # End of the quest
     input("Press Enter to continue your adventure...")
+
+    # Start the encounter with a strange character
+    encounter_strange_character(player)
+
+def encounter_strange_character(player):
+    clear_screen()
+    print("As you make your way to the central market, you encounter a strange character.")
+    input("Press Enter to initiate a conversation...")
+
+    print("\n: Greetings, adventurer! I am Zephyr, the wanderer of Mushroomville.")
+    input("Press Enter to continue...")
+
+    print("\nZephyr: I sense you're on a quest. Would you like some guidance?")
+    print("1. Attack!")
+    print("2. Escape!")
+    print("3. Negotiate.")
+
+    # Player's choice
+    while True:
+        try:
+            choice = int(input("\nYour choice (enter the number): "))
+            if choice in [1, 2, 3]:
+                break
+            else:
+                print("Invalid choice. Please enter 1, 2, or 3.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+    if choice == 1:
+        print("\nZephyr: Surprised by your sudden attack, I'll make a swift escape.")
+        input("Press Enter to continue...")
+
+    elif choice == 2:
+        print("\nZephyr: You flee from the encounter, leaving the bewildered Zephyr behind.")
+        input("Press Enter to continue...")
+
+    elif choice == 3:
+        print("\nZephyr: Wise choice, adventurer. To reach your destination, head straight to the central market.")
+        input("Press Enter to continue...")
+
+    print("\nYou successfully navigate through the encounter and arrive at the central market.")
+    input("Press Enter to meet Beatrix and start the next quest...")
+
+    # # Start the third quest
+    # quest3(player)
