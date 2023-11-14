@@ -251,6 +251,7 @@ def game_completed(player):
     print("As a reward, I present to you the secret recipe for the most magical pizza of all...\n")
     print("The Pineapple Paradise Pizza!\n")
     print("Thank you for playing the game. We hope you enjoyed your adventure!\n")
+    print(ascii_art.game_over_art)
     input("Press Enter to return to main menu...")
     start_game(player)
 
