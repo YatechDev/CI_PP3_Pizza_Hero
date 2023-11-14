@@ -237,7 +237,7 @@ def quest_3(player):
 
         game_completed(player)
     else:
-        print("\nBeatrix: A peculiar decision, but I respect it. The quest continues...\n")
+        print("\nBeatrix: A peculiar decision, but I respect it. Maybe next time...\n")
         input("Press Enter to proceed...")
 
         game_over(player)
@@ -251,11 +251,11 @@ def game_completed(player):
     print("As a reward, I present to you the secret recipe for the most magical pizza of all...\n")
     print("The Pineapple Paradise Pizza!\n")
     print("Thank you for playing the game. We hope you enjoyed your adventure!\n")
-    input("Press Enter to return to the beginning...")
-    main()
+    input("Press Enter to return to main menu...")
+    start_game(player)
 
 def game_over(player):
     clear_screen()
     print(ascii_art.game_over_art)
-    input("Press Enter to return to the beginning...")
-    main()
+    input("Press Enter to return to main menu...")
+    start_game(player)
