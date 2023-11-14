@@ -1,10 +1,28 @@
 import ascii_art
 import os
 
-print(ascii_art.title_art)
+
+class Player:
+    def __init__(self, name):
+        self.name = name
+        self.inventory = []
+
+    def add_to_inventory(self, item):
+        self.inventory.append(item)
+
+    def print_inventory(self):
+        print("\nInventory:")
+        for item in self.inventory:
+            print(f"- {item}")
+
+
+def clear_screen():
+    # Function to clear the terminal screen
+    os.system('clear' if os.name == 'posix' else 'cls')
 
 
 def print_menu():
+    # Function to print the main menu
     print("************ PIZZA HERO: THE MUSHROOM QUEST ************")
     print("-------------------------------------------------------")
     print("                 1. Start Game")
@@ -13,22 +31,61 @@ def print_menu():
     print("-------------------------------------------------------")
 
 
-def start_game():
-    """
-    Function to start the game
-    """
-    os.system('clear' if os.name == 'posix' else 'cls')  # Clear actual terminal screen
-    print(ascii_art.pizza_art)  # Print ascii art of pizza
-    print("Are you ready?")
-    choice = input("Please answer Yes / No?: ")
-    print("Starting the game...")
+def start_game(player):
+    # Function to start the game
+    clear_screen()
+    print(ascii_art.pizza_art)
+    print(f"Welcome, {player.name}! Are you ready for an adventure?")
+    input("Press Enter to continue...")
 
+    print(
+        "\nYou find yourself in the small town of Mushroomville. Your great-grandfather's recipe for the magical pizza is hidden somewhere here.")
+    input("Press Enter to explore...")
+
+    print("\nAs you walk through the town, you encounter a friendly mushroom named Funghi.")
+    input("Press Enter to talk to Funghi...")
+
+    print(
+        "\nFunghi: Hello, brave adventurer! I heard you're on a quest for the magical pizza. I can help you, but first, you must prove yourself.")
+    input("Press Enter to continue...")
+
+    print("\nFunghi: To prove your bravery, you need to solve a riddle. Here it is:")
+    print("I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?")
+
+    # Options for the player to choose
+    options = ["An echo", "A tree", "A river"]
+
+    # Display options
+    for i, option in enumerate(options, start=1):
+        print(f"{i}. {option}")
+
+    # Player's choice
+    while True:
+        try:
+            choice = int(input("Your choice (enter the number): "))
+            if 1 <= choice <= len(options):
+                break
+            else:
+                print("Invalid choice. Please enter a number between 1 and", len(options))
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+    # Check the player's answer
+    if options[choice - 1] == "An echo":
+        print(
+            "\nFunghi: Correct! You're truly a hero. Take this map; it will guide you to the ingredients for the magical pizza.")
+        player.add_to_inventory("Map")
+    else:
+        print("\nFunghi: That's not the correct answer. Think again!")
+        # Recursively call start_game until the correct answer is provided
+        start_game(player)
+
+    input("Press Enter to continue...")
 
 
 def show_rules():
-    """
-       Function to show the game rules
-       """
+    # Function to display game rules
+    clear_screen()
     print("Pizza Hero: The Mushroom Quest")
     print("------------------------------")
     print("Game Instructions:")
@@ -37,37 +94,62 @@ def show_rules():
     print("Throughout the game, you will follow the story, make decisions, and solve puzzles.")
     print("To make choices, enter the corresponding option numbers.")
     print("Good luck!")
-    print()
+    input("Press Enter to go back to the main menu...")
 
-    while True:
-        choice = input("Please choose an option (1: Start, 2: Exit): ")
 
-        if choice == "1":
-            start_game()
-            break
-        elif choice == "2":
-            print("Exiting the game...")
-            return
-        else:
-            print("Error: Invalid command. Please try again.")
+def explore_map(player):
+    # Function to explore the map
+    clear_screen()
+    print("You take out the map and see the following:")
+    print("Map Information:")
+    print("1. A drawn forest")
+    print("2. A small building behind the forest")
+
+    input("Press Enter to continue...")
+
+    print("\nYou decide to head towards the forest.")
+    input("Press Enter to continue...")
+
+    print("\nAs you enter the forest, you hear mysterious sounds and feel a magical aura.")
+    input("Press Enter to explore further...")
+
+    print("\nAfter some time, you find yourself in front of a small building.")
+    print("This must be the place mentioned on the map!")
+    input("Press Enter to continue...")
+
+    print(
+        "\nCongratulations, you've found the secret building. Inside, you discover the ancient recipe for the magical pizza.")
+    player.add_to_inventory("Ancient Pizza Recipe")
+    input("Press Enter to continue...")
+
 
 def main():
-    print_menu()
+    # Main function to run the game
+    clear_screen()
+    print(ascii_art.title_art)
+    player_name = input("Enter your name: ")
+    player = Player(player_name)
 
     while True:
+        print_menu()
         choice = input("Please type the number: ")
 
         if choice == "1":
-            start_game()
-            break
+            start_game(player)
         elif choice == "2":
             show_rules()
-            break
         elif choice == "3":
             print("Exiting the game...")
-            return
+            break
         else:
             print("Error: Invalid command. Please try again.")
+
+        if "Map" in player.inventory:
+            # If the player has the map, give them the option to explore it
+            explore_choice = input("Would you like to explore the map? (yes/no): ").lower()
+            if explore_choice == "yes":
+                explore_map(player)
+                player.print_inventory()
 
 
 if __name__ == "__main__":
