@@ -42,7 +42,9 @@ def print_menu():
 def start_game(player):
     # Function to start the game
     clear_screen()
-    print(ascii_art.pizza_art)
+    # print(ascii_art.pizza_art)
+    centered_pizza = center_text(ascii_art.pizza_art)
+    print(centered_pizza)
     print(f"Welcome, {player.name}! Are you ready for an adventure?")
     input("Press Enter to continue...")
 
