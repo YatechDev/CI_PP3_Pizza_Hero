@@ -1,6 +1,14 @@
 import ascii_art
 import os
 
+def center_text(text):
+    """
+    Center the text in the terminal window.
+    """
+    columns, _ = os.get_terminal_size()
+    padding = (columns - len(text)) // 2
+    centered_text = " " * padding + text
+    return centered_text
 
 class Player:
     def __init__(self, name):
@@ -21,14 +29,29 @@ def clear_screen():
     os.system('clear' if os.name == 'posix' else 'cls')
 
 
-def print_menu():
-    # Function to print the main menu
-    print("************ PIZZA HERO: THE MUSHROOM QUEST ************")
-    print("-------------------------------------------------------")
-    print("                 1. Start Game")
-    print("                 2. Rules")
-    print("                 3. Exit")
-    print("-------------------------------------------------------")
+# def print_menu():
+#     # Function to print the main menu
+#     print("************ PIZZA HERO: THE MUSHROOM QUEST ************")
+#     print("-------------------------------------------------------")
+#     print("                 1. Start Game")
+#     print("                 2. Rules")
+#     print("                 3. Exit")
+#     print("-------------------------------------------------------")
+
+# Function to print the main menu
+    title = "************ PIZZA HERO: THE MUSHROOM QUEST ************"
+    separator = "-------------------------------------------------------"
+
+    # Center the title and separator
+    centered_title = center_text(title)
+    centered_separator = center_text(separator)
+
+    print(centered_title)
+    print(centered_separator)
+    print(center_text("1. Start Game"))
+    print(center_text("2. Rules"))
+    print(center_text("3. Exit"))
+    print(centered_separator)
 
 
 def start_game(player):
