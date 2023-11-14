@@ -49,38 +49,40 @@ def start_game(player):
         "\nFunghi: Hello, brave adventurer! I heard you're on a quest for the magical pizza. I can help you, but first, you must prove yourself.")
     input("Press Enter to continue...")
 
-    print("\nFunghi: To prove your bravery, you need to solve a riddle. Here it is:")
-    print("I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?")
-
-    # Options for the player to choose
-    options = ["An echo", "A tree", "A river"]
-
-    # Display options
-    for i, option in enumerate(options, start=1):
-        print(f"{i}. {option}")
-
-    # Player's choice
+    # Loop for the riddle question
     while True:
-        try:
-            choice = int(input("Your choice (enter the number): "))
-            if 1 <= choice <= len(options):
-                break
-            else:
-                print("Invalid choice. Please enter a number between 1 and", len(options))
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-
-    # Check the player's answer
-    if options[choice - 1] == "An echo":
+        clear_screen()
+        print("\nFunghi: To prove your bravery, you need to solve a riddle. Here it is:")
         print(
-            "\nFunghi: Correct! You're truly a hero. Take this map; it will guide you to the ingredients for the magical pizza.")
-        player.add_to_inventory("Map")
-    else:
-        print("\nFunghi: That's not the correct answer. Think again!")
-        # Recursively call start_game until the correct answer is provided
-        start_game(player)
+            "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?")
 
-    input("Press Enter to continue...")
+        # Options for the player to choose
+        options = ["An echo", "A tree", "A river"]
+
+        # Display options
+        for i, option in enumerate(options, start=1):
+            print(f"{i}. {option}")
+
+        # Player's choice
+        while True:
+            try:
+                choice = int(input("Your choice (enter the number): "))
+                if 1 <= choice <= len(options):
+                    break
+                else:
+                    print("Invalid choice. Please enter a number between 1 and", len(options))
+            except ValueError:
+                print("Invalid input. Please enter a number.")
+
+        # Check the player's answer
+        if options[choice - 1] == "An echo":
+            print(
+                "\nFunghi: Correct! You're truly a hero. Take this map; it will guide you to the ingredients for the magical pizza.")
+            player.add_to_inventory("Map")
+            break
+        else:
+            print("\nFunghi: That's not the correct answer. Think again!")
+            input("Press Enter to try the riddle again...")
 
 
 def show_rules():
