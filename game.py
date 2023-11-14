@@ -6,9 +6,8 @@ import os
 
 class Player:
     def __init__(self, name):
-        # Initialize the Player class with a name and an empty inventory
+        # Initialize the Player class with a name.
         self.name = name
-        self.inventory = []
 
 
 def clear_screen():
