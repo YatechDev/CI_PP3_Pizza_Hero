@@ -13,7 +13,7 @@ def clear_screen():
 
 def show_rules():
     clear_screen()
-    print(ascii_art.pizza_art)
+    print(ascii_art.title_art)
     print("Pizza Hero: The Mushroom Quest")
     print("------------------------------")
     print("Game Instructions:\n")
