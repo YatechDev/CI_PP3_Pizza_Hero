@@ -74,6 +74,8 @@ def start_game(player):
             print("\nFunghi: Amazing! You're truly a hero. Let me give you a hint.")
             input("Press Enter to continue...")
 
+            clear_screen()
+            print(ascii_art.title_art)
             print(
                 "\nFunghi: Now, you should head to Dark Timmy's place on the edge of the town. He'll guide you further.\n")
             input("Press Enter to continue...")
@@ -86,18 +88,22 @@ def start_game(player):
 
 def quest_1(player):
     clear_screen()
+    print(ascii_art.title_art)
     print("You embark on a journey to Dark Timmy's place on the edge of the town.\n")
     input("Press Enter to continue...")
 
     clear_screen()
+    print(ascii_art.title_art)
     print("\nAfter a dark and mysterious path, you reach Dark Timmy's residence.\n")
     input("Press Enter to meet Dark Timmy...")
 
     clear_screen()
+    print(ascii_art.title_art)
     print("\nDark Timmy: Greetings, brave adventurer! Welcome to the gloomy side of Mushroomville.")
     input("Press Enter to continue...")
 
     clear_screen()
+    print(ascii_art.title_art)
     print(
         "\nDark Timmy: I heard you're on a quest for the magical pizza. Before we proceed, would you like to hear a joke?\n")
     print("1. Yes, tell me the joke.")
@@ -118,9 +124,14 @@ def quest_1(player):
         print("Why did the pizza maker go to jail?\n")
         input("Press Enter to hear the punchline...")
 
+        clear_screen()
+        print(ascii_art.title_art)
         print(
             "\nDark Timmy: Because he couldn't make a good crust! Haha! Well, I find it amusing. Now, back to business.\n")
         input("Press Enter to continue...")
+
+        clear_screen()
+        print(ascii_art.title_art)
         print(
             "\nDark Timmy: The recipe you seek is indeed a valuable one. However, you can find it in Beatrix's shop at the central market.\n")
     else:
@@ -135,12 +146,17 @@ def quest_1(player):
 
 def encounter_strange_character(player):
     clear_screen()
+    print(ascii_art.title_art)
     print("\nAs you make your way to the central market, you encounter a strange character.")
     input("Press Enter to initiate a conversation...")
 
+    clear_screen()
+    print(ascii_art.title_art)
     print("\nZephyr: Greetings, adventurer! I am Zephyr, the wanderer of Mushroomville.")
     input("Press Enter to continue...")
 
+    clear_screen()
+    print(ascii_art.title_art)
     print("\nZephyr: I sense you're on a quest. Would you like some guidance?")
     print("1. Attack!")
     print("2. Escape!")
@@ -159,31 +175,46 @@ def encounter_strange_character(player):
     if choice == 1:
         print("\nZephyr: Surprised by your sudden attack, I'll make a swift escape.")
         input("Press Enter to continue...")
+        clear_screen()
+        print(ascii_art.title_art)
 
     elif choice == 2:
         print("\nZephyr: You flee from the encounter, leaving the bewildered Zephyr behind.")
         input("Press Enter to continue...")
+        clear_screen()
+        print(ascii_art.title_art)
 
     elif choice == 3:
         print("\nZephyr: Wise choice, adventurer. To reach your destination, head straight to the central market.")
         input("Press Enter to continue...")
+        clear_screen()
+        print(ascii_art.title_art)
 
     print("\nYou successfully navigate through the encounter and arrive at the central market.")
     input("Press Enter to meet Beatrix and start the next quest...")
+    clear_screen()
+    print(ascii_art.title_art)
 
     quest_3(player)
 
 def quest_3(player):
     clear_screen()
+    print(ascii_art.title_art)
     print("You reach the central market and find Beatrix's magical pizza shop.\n")
     input("Press Enter to meet Beatrix...")
 
+    clear_screen()
+    print(ascii_art.title_art)
     print("\nBeatrix: Ah, you must be the brave adventurer seeking the magical pizza recipe. Welcome!\n")
     input("Press Enter to continue...")
 
+    clear_screen()
+    print(ascii_art.title_art)
     print("Beatrix hands you a slice of her famous magical pizza.")
     input("Press Enter to make your choice...")
 
+    clear_screen()
+    print(ascii_art.title_art)
     print("\n1. Eat the pizza.")
     print("2. Refuse the pizza.")
 
@@ -200,17 +231,17 @@ def quest_3(player):
     if choice == 1:
         print("\nBeatrix: A wise choice! Enjoy the magical pizza.\n")
         input("Press Enter to savor the magical taste...")
+        clear_screen()
+        print(ascii_art.title_art)
 
         game_completed(player)
     else:
         print("\nBeatrix: A peculiar decision, but I respect it. The quest continues...\n")
         input("Press Enter to proceed...")
 
-# Continue the story with a new quest
-
-
 def game_completed(player):
     clear_screen()
+    print(ascii_art.title_art)
     print("Congratulations, " + player.name + "!")
     print("You have successfully completed the Pizza Hero: The Mushroom Quest.\n")
     print("Beatrix: You have proven yourself worthy of the magical pizza recipe.\n")
