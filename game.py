@@ -13,6 +13,7 @@ def clear_screen():
 
 def show_rules():
     clear_screen()
+    print(ascii_art.pizza_art)
     print("Pizza Hero: The Mushroom Quest")
     print("------------------------------")
     print("Game Instructions:\n")
@@ -25,24 +26,31 @@ def show_rules():
 
 def start_game(player):
     clear_screen()
-    print(ascii_art.pizza_art)
+    print(ascii_art.title_art)
     print(f"Welcome, {player.name}! Are you ready for an adventure?\n")
     input("Press Enter to continue...")
 
+    clear_screen()
+    print(ascii_art.title_art)
     print(
         "\nYou find yourself in the small town of Mushroomville. Your great-grandfather's recipe for the magical pizza "
         "is hidden somewhere here.\n")
     input("Press Enter to explore...")
 
+    clear_screen()
+    print(ascii_art.title_art)
     print("\nAs you walk through the town, you encounter a friendly mushroom named Funghi.\n")
     input("Press Enter to talk to Funghi...")
 
+    clear_screen()
+    print(ascii_art.title_art)
     print("\nFunghi: Hello, brave adventurer! I heard you're on a quest for the magical pizza. I can help you, "
           "but first, you must prove yourself.\n")
     input("Press Enter to continue...")
 
     while True:
         clear_screen()
+        print(ascii_art.title_art)
         print("\nFunghi: To prove your bravery, you need to solve a riddle. Here it is:")
         print(
             "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?\n")
@@ -81,12 +89,15 @@ def quest_1(player):
     print("You embark on a journey to Dark Timmy's place on the edge of the town.\n")
     input("Press Enter to continue...")
 
+    clear_screen()
     print("\nAfter a dark and mysterious path, you reach Dark Timmy's residence.\n")
     input("Press Enter to meet Dark Timmy...")
 
+    clear_screen()
     print("\nDark Timmy: Greetings, brave adventurer! Welcome to the gloomy side of Mushroomville.")
     input("Press Enter to continue...")
 
+    clear_screen()
     print(
         "\nDark Timmy: I heard you're on a quest for the magical pizza. Before we proceed, would you like to hear a joke?\n")
     print("1. Yes, tell me the joke.")
