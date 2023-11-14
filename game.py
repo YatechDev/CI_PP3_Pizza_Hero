@@ -3,15 +3,21 @@
 import ascii_art
 import os
 
+
 class Player:
     def __init__(self, name):
+        # Initialize the Player class with a name and an empty inventory
         self.name = name
         self.inventory = []
 
+
 def clear_screen():
+    # Function to clear the console screen
     os.system('clear' if os.name == 'posix' else 'cls')
 
+
 def show_rules():
+    # Function to display the game rules
     clear_screen()
     print(ascii_art.title_art)
     print("Pizza Hero: The Mushroom Quest")
@@ -24,7 +30,9 @@ def show_rules():
     print("Good luck!\n")
     input("Press Enter to start your adventure...")
 
+
 def start_game(player):
+    # Function to start the game and introduce the player to the initial scenario
     clear_screen()
     print(ascii_art.title_art)
     print(f"Welcome, {player.name}! Are you ready for an adventure?\n")
@@ -33,7 +41,8 @@ def start_game(player):
     clear_screen()
     print(ascii_art.title_art)
     print(
-        "\nYou find yourself in the small town of Mushroomville. Your great-grandfather's recipe for the magical pizza "
+        "\nYou find yourself in the small town of Mushroomville. Your great-grandfather's recipe for the "
+        "magical pizza "
         "is hidden somewhere here.\n")
     input("Press Enter to explore...")
 
@@ -53,7 +62,8 @@ def start_game(player):
         print(ascii_art.title_art)
         print("\nFunghi: To prove your bravery, you need to solve a riddle. Here it is:")
         print(
-            "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?\n")
+            "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. "
+            "What am I?\n")
 
         options = ["An echo", "A tree", "A river"]
 
@@ -77,7 +87,8 @@ def start_game(player):
             clear_screen()
             print(ascii_art.title_art)
             print(
-                "\nFunghi: Now, you should head to Dark Timmy's place on the edge of the town. He'll guide you further.\n")
+                "\nFunghi: Now, you should head to Dark Timmy's place on the edge of the town. He'll guide you "
+                "further.\n")
             input("Press Enter to continue...")
 
             quest_1(player)
@@ -86,7 +97,9 @@ def start_game(player):
             print("\nFunghi: That's not the correct answer. Think again!\n")
             input("Press Enter to try the riddle again...")
 
+
 def quest_1(player):
+    # Function for the first quest in the game
     clear_screen()
     print(ascii_art.title_art)
     print("You embark on a journey to Dark Timmy's place on the edge of the town.\n")
@@ -105,7 +118,8 @@ def quest_1(player):
     clear_screen()
     print(ascii_art.title_art)
     print(
-        "\nDark Timmy: I heard you're on a quest for the magical pizza. Before we proceed, would you like to hear a joke?\n")
+        "\nDark Timmy: I heard you're on a quest for the magical pizza. Before we proceed, would you like to "
+        "hear a joke?\n")
     print("1. Yes, tell me the joke.")
     print("2. No, I'm not in the mood.")
 
@@ -127,24 +141,29 @@ def quest_1(player):
         clear_screen()
         print(ascii_art.title_art)
         print(
-            "\nDark Timmy: Because he couldn't make a good crust! Haha! Well, I find it amusing. Now, back to business.\n")
+            "\nDark Timmy: Because he couldn't make a good crust! Haha! Well, I find it amusing. Now, back "
+            "to business.\n")
         input("Press Enter to continue...")
 
         clear_screen()
         print(ascii_art.title_art)
         print(
-            "\nDark Timmy: The recipe you seek is indeed a valuable one. However, you can find it in Beatrix's shop at the central market.\n")
+            "\nDark Timmy: The recipe you seek is indeed a valuable one. However, you can find it in Beatrix's shop "
+            "at the central market.\n")
     else:
         print("\nDark Timmy: No worries. Let's get back to business.\n")
         input("Press Enter to continue...")
         print(
-            "\nDark Timmy: The recipe you seek is indeed a valuable one. However, you can find it in Beatrix's shop at the central market.\n")
+            "\nDark Timmy: The recipe you seek is indeed a valuable one. However, you can find it in Beatrix's "
+            "shop at the central market.\n")
 
     input("Press Enter to continue your adventure...")
 
     encounter_strange_character(player)
 
+
 def encounter_strange_character(player):
+    # Function for encountering a strange character in the central market
     clear_screen()
     print(ascii_art.title_art)
     print("\nAs you make your way to the central market, you encounter a strange character.\n")
@@ -197,7 +216,9 @@ def encounter_strange_character(player):
 
     quest_3(player)
 
+
 def quest_3(player):
+    # Function for the third quest in the game
     clear_screen()
     print(ascii_art.title_art)
     print("You reach the central market and find Beatrix's magical pizza shop.\n")
@@ -242,7 +263,9 @@ def quest_3(player):
 
         game_over(player)
 
+
 def game_completed(player):
+    # Function to display the game completion message
     clear_screen()
     print(ascii_art.title_art)
     print("Congratulations, " + player.name + "!")
@@ -252,11 +275,13 @@ def game_completed(player):
     print("The Pineapple Paradise Pizza!\n")
     print("Thank you for playing the game. We hope you enjoyed your adventure!\n")
     print(ascii_art.game_completed_art)
-    input("\nPress Enter to return to main menu...")
+    input("\nPress Enter to return to the main menu...")
     start_game(player)
 
+
 def game_over(player):
+    # Function to display the game over message
     clear_screen()
     print(ascii_art.game_over_art)
-    input("\nPress Enter to return to main menu...")
+    input("\nPress Enter to return to the main menu...")
     start_game(player)
