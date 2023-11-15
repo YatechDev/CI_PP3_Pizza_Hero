@@ -153,5 +153,5 @@ Forking the GitHub repository:
 Unfortunately, due to the recent challenging period in my personal life, I decided to undertake 
 a simple project to meet the final deadline. I want to thank the Code Institute for the opportunity I have been given.
 
-[Back to top &uarr;](#Pizza-Hero)
+[Back to top &uarr;](#Pizza-Hero) 
 <hr>
