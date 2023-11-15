@@ -1,32 +1,56 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Pizza Hero - The Mushroom Quest
+### Text Based game inside the mushroom fantasy world
+#### (Developer: Mateusz Smalarz aka [YatechDev](https://github.com/YatechDev))
 
-Welcome,
+![Mockup image](docs/mockup.png)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+[Pizza Hero - Live webpage](https://pizza-hero-742dd83e8c30.herokuapp.com/) (Right click to
+open in new tab)
 
-## Reminders
+This project serves as the third portfolio submission for the Code Institute's Full Stack Software Development diploma (LVL 5). 
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+The primary focus is on showcasing proficiency in Python, and the entire development is carried out using this language.
+Striving for simplicity, no external frameworks or additional languages were employed, except for the components required by the Code Institute Template.
 
-## Creating the Heroku app
+## Project Goals
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+The objective of this project is to develop an engaging text-based adventure game 
+titled "Pizza Hero: The Mushroom Quest." The game offers a captivating storyline 
+and challenges players to navigate through a fantasy world, solve puzzles, and 
+make decisions to prepare a magical pizza using their great-grandfather's recipe. 
+The goal is to provide players with an immersive and entertaining experience within the realm of Mushroomville.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### User Goals
+- Players can embark on a captivating adventure in the fantasy world of Mushroomville.
+- Players can enjoy a unique and nostalgic gaming experience as they follow the storyline and solve puzzles.
+- Players can engage in decision-making and experience the thrill of a text-based adventure game.
+- Players can explore the Mushroomville town, interact with characters, and uncover the secrets of the magical pizza recipe.
+- Players can experience a sense of accomplishment upon completing the game.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Site Owner Goals
+- Creating an engaging and immersive text-based adventure game that appeals to players who enjoy fantasy and storytelling.
+- Designing a game with an intuitive interface and clear navigation to enhance the overall user experience.
+- Integrating challenging puzzles and decision points to keep players entertained and invested in the game.
+- Ensuring the game is responsive and compatible with various devices to maximize accessibility.
+- Fostering a sense of accomplishment for players upon completing the game and discovering the magical pizza recipe
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## User Experience
 
-Connect your GitHub repository and deploy as normal.
+### Target Audience
+The target audience for this game includes fans of text-based adventure games, 
+fantasy enthusiasts, and players who appreciate storytelling in a gaming format. 
+The game's nostalgic elements and unique storyline make it suitable for a diverse 
+age range, appealing to both younger and adult players. The immersive world of 
+Mushroomville, combined with interactive decision-making, caters to those seeking 
+an enjoyable and memorable gaming experience.
 
-## Constraints
+### User Requirements and Expectations
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+Players engaging with this game anticipate an immersive adventure with 
+captivating storytelling and interactive decision-making. They expect the game 
+to provide a nostalgic experience reminiscent of classic text-based adventures. 
+The interface should be intuitive, facilitating easy navigation through the 
+Mushroomville town and interactions with various characters. Players also expect 
+compatibility with different devices, enabling them to enjoy the game on computers, 
+tablets, and mobile phones. Overall, users seek an entertaining and accessible 
+gaming experience that combines fantasy, decision-making, and the thrill of exploration.
