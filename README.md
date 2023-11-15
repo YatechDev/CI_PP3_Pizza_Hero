@@ -64,7 +64,8 @@ gaming experience that combines fantasy, decision-making, and the thrill of expl
 - Python
 
 ### Frameworks & Tools
-- [GitHub](https://github.com/) (create, hold and deploy repository)
+- [GitHub](https://github.com/) (create and hold repository)
+- [Heroku](https://www.heroku.com/) (use for the deployment)
 - [Git](https://git-scm.com/) (source code management)
 - [PyCharm](https://www.jetbrains.com/pycharm/) (IDE use to build this program)
 - [CI Python Linter](https://pep8ci.herokuapp.com/) (validation of Python code)
@@ -109,13 +110,21 @@ Laptops
 | Error after 1 quest in game, next function didn't load | Corrected typo mistake in function               | Fixed      |
 
 ## Deployment
-The website was deployed on GitHub by using following steps:
-1. Login into GitHub and locate the repository - [CI_PP3_Pizza_Hero](https://github.com/YatechDev/CI_PP3_Pizza_Hero)
-2. At the top of repository locate the "settings" button and click on it.
-3. Now on the left sidebar find locate the "pages" button and click on it.
-4. Under source heading click on the branch dropdown menu and select: master.
-5. Click save.
-6. You will receive link to your deployed repository like on the screen below.
+The website was deployed on Heroku by using following steps:
+1. Click the "create new app" button on Heroku.
+2. Assign a unique name to the app.
+3. Choose the region; for this project, Europe was the selected region.
+4. Click "create app" to finalize the app creation.
+5. Navigate to the settings tab.
+6. Click "add build pack".
+7. Choose Python and NodeJS buildpacks. Ensure that the build pack order is Python on top and NodeJS underneath.
+8. Proceed to the deploy tab.
+9. Choose the deployment method; GitHub was employed for this project.
+10. Search for the GitHub repository name; in this case, it was "soulroll."
+11. Click "connect" to establish the connection.
+12. Opt for manual or automatic deployment. For this project, automatic deployment was chosen to sync with GitHub commits.
+13. Verify that the main branch is selected.
+14. Following the initial deployment, a success message will appear, stating, "your app was successfully deployed," and a "view" button will be available to access the deployed application.
 
 
 Forking the GitHub repository:
@@ -139,7 +148,8 @@ Forking the GitHub repository:
   me to focus on my work and keep me motivated to act all the time.
 - To my family and friends - for being a great support and for their motivation.
 - The entire Code Institute community on slack for great understanding and motivation every day!
-- 
+
+
 Unfortunately, due to the recent challenging period in my personal life, I decided to undertake 
 a simple project to meet the final deadline. I want to thank the Code Institute for the opportunity I have been given.
 
